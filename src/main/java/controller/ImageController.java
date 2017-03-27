@@ -38,16 +38,46 @@ public class ImageController {
 	 * @param numberToGet How many Images to get.
 	 * @return An array of random Images.
 	 */
-	public Image[] randomizeImages (int numberToGet) {
+	public List<Image> randomizeImages (int numberToGet) {
 		List<Image> images = getAllImages();
 		List<Image> randomizedImages = new ArrayList<Image>();
 		for (int i = 0; i < numberToGet; i++) {
 			Random rand = new Random();
-			int randomNumber = rand.nextInt(images.length) + 1;
-			Image image = images[randomNumber];
+			int randomNumber = rand.nextInt(images.size());
+			Image image = images.get(randomNumber); //replace with for loop? / could be improved 
 			randomizedImages.add(image);
 		}	
 		return randomizedImages;
+	}
+	
+	/**
+	 * Adds an image to the server.
+	 *
+	 * @param image The image to add.
+	 * @return True if successful.
+	 */
+	public boolean addImage (File file) {
+		if (dir.isDirectory()) {
+			//check if file has same name
+			BufferedImage img = null;
+			String filename = file.getName();
+			String fileExtension = "";
+            int i = filename.lastIndexOf('.');
+            if (i >= 0) {
+                fileExtension = filename.substring(i+1);
+                if(fileExtension.equalsIgnoreCase("jpg")){
+                	try {
+                        img = ImageIO.read(file);
+                        File outputfile = new File("resources/images/gallery/" + filename);
+            			ImageIO.write(img, fileExtension, outputfile);
+                    } catch (final IOException e) {
+                        // could not read image
+                    	//return e.getMessage();
+                    }
+                }
+            }
+        }
+		return true;
 	}
 	
 	/**
@@ -102,16 +132,4 @@ public class ImageController {
 			return images;
 		}
 	}
-
-	/**
-	 * Gets an image.
-	 *
-	 * @param number number to turn to 0.
-	 * @return Description text text text.
-	 */
-	public Image getImage (int number) {
-		
-		return null;
-	}
-
 }
