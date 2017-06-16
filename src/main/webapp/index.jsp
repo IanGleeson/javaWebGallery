@@ -41,6 +41,14 @@
 			box-shadow: none;
 			border-color: #17b98b;
 		}
+		@media (max-width: 480px) {
+			header{
+				text-align: center;
+			}
+			.navbar-brand{
+				float: none;
+			}
+		}
 	</style>
 	<script type="text/javascript">
 	$( document ).ready(function() {
@@ -52,7 +60,7 @@
 	<%@include file="pages/header.html" %>
 	<section class="container">
 		<main>
-			<h4>This is the main content of this site</h1>
+			<h4>This is the main content of this site</h4>
 			<div class="gallery">
 			    <figure>
 				      <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" data-size="1024x1024">
