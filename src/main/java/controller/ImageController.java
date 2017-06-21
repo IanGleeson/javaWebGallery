@@ -7,10 +7,13 @@ import javax.imageio.ImageIO;
 
 import model.Image;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
 /**
  * @author Ian_G
  *
  */
+@Path(value = "/gallery") //TODO use jax from pom or httpservlet to communicate
 public class ImageController {
 	static final File dir = new File("resources/images/gallery");
     static final String[] EXTENSIONS = new String[]{
@@ -43,7 +46,7 @@ public class ImageController {
 		List<Image> randomizedImages = new ArrayList<Image>();
 		for (int i = 0; i < numberToGet; i++) {
 			Random rand = new Random();
-			int randomNumber = rand.nextInt(images.size());
+			int randomNumber = rand.nextInt(images.size()); //check if this can go minus
 			Image image = images.get(randomNumber); //replace with for loop? / could be improved 
 			randomizedImages.add(image);
 		}	
@@ -106,6 +109,7 @@ public class ImageController {
 	 *
 	 * @return An ArrayList of Images.
 	 */
+	@GET
 	public List<Image> getAllImages() {
 		List<Image> images = new ArrayList<Image>();
 		
