@@ -57,7 +57,7 @@
 	</script>
 </head>
 <body>
-	<%@include file="pages/header.html" %>
+	<%@include file="WEB-INF/pages/header.html" %>
 	<section class="container">
 		<main>
 			<h4>This is the main content of this site</h4>
