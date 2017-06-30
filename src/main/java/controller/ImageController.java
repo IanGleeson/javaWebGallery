@@ -6,14 +6,10 @@ import java.util.*;
 import javax.imageio.ImageIO;
 
 import model.Image;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
 /**
  * @author Ian_G
  *
  */
-@Path(value = "/gallery") //TODO use jax from pom or httpservlet to communicate
 public class ImageController {
 	static final File dir = new File("src/main/resources/images/gallery");
     static final String[] EXTENSIONS = new String[]{
@@ -30,10 +26,6 @@ public class ImageController {
             return (false);
         }
     };
-    
-	public static void main(String[] args) {
-		
-	}
 	
 	/**
 	 * Randomizes all images.
@@ -129,10 +121,12 @@ public class ImageController {
                 }
             }
         }
-		if(images.isEmpty()){
+		//TODO return no images exception if empty
+		/*if(images.isEmpty()){
 			return null;
 		}else{
 			return images;
-		}
+		}*/
+		return images;
 	}
 }

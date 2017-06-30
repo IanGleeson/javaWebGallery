@@ -1,10 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ page import="controller.ImageController"%>
-<%
-  ImageController im = new ImageController();
- /*   List<Image> images = im.getAllImages(); */ /* add getJSON method to imagecontroller? */
-  //use servlet
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,15 +21,9 @@
 		main{
 			
 		}
-		header{
-			background-color: aliceblue;
-		}
 		.gallery {
 			display: flex;
 			flex-wrap: wrap;
-		}
-		.gallery img{
-			max-width: 300px
 		}
 		figure{
 			margin: 5px;
@@ -71,6 +59,7 @@
 				      </a>
 				     <figcaption>Image caption  1</figcaption>                                 
 			    </figure>
+			    <!-- TODO dynamically add images -->
 			    <figure>
 				      <a href="images/gallery/sample.jpg" data-size="717x478">
 				          <img src="images/gallery/sample.jpg" alt="Image description" />

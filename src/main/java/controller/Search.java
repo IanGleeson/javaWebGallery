@@ -29,7 +29,7 @@ public class Search extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String filename = request.getParameter("filename");
-		System.out.println(filename);
+		//System.out.println(filename);
 		
 		//TODO handle nulls and use db
 		ImageController im = new ImageController();

@@ -13,14 +13,12 @@ import model.Image;
 
 public class testImage {
 	
-	ImageController ic = new ImageController();
-	Image im = new Image();
+	//ImageController ic = new ImageController();
+	//Image im = new Image();
 	
 	@Test
 	public void image() {
-		//webapp works. resources can't read file
-		//should use resources to prevent unwanted images from being scraped by client
-		File file = new File("src/main/webapp/images/gallery/sample.jpg");
+		File file = new File("src/main/resources/images/gallery/sample2.jpg");
 		BufferedImage img = null;
         try {
 			img = ImageIO.read(file);
@@ -34,18 +32,6 @@ public class testImage {
         } catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-        
-//		im.setPath("src/main/webapp/images/gallery/sample.jpg"); //path is correct
-//		im.setFilename("");
-//		im.setHeight(0);
-//		im.setWidth(0);
-//		im.setCaption("");
-	    
-		
-		//assertNotNull(file);
-		//System.out.println(file.exists());
-        
 	}
 	
 }
