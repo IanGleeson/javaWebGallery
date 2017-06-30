@@ -3,7 +3,7 @@
 <%
   ImageController im = new ImageController();
  /*   List<Image> images = im.getAllImages(); */ /* add getJSON method to imagecontroller? */
-  
+  //use servlet
 %>
 <!DOCTYPE html>
 <html>
@@ -52,7 +52,7 @@
 	<%@include file="pages/header.html" %>
 	<section class="container">
 		<main>
-			<h4>This is the main content of this site</h1>
+			<h4>This is the main content of this site</h4>
 			<div class="gallery">
 			    <figure>
 				      <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" data-size="1024x1024">
