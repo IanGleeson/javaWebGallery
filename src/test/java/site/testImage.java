@@ -1,7 +1,5 @@
 package site;
 
-import static org.junit.Assert.*;
-
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -20,6 +18,8 @@ public class testImage {
 	
 	@Test
 	public void image() {
+		//webapp works. resources can't read file
+		//should use resources to prevent unwanted images from being scraped by client
 		File file = new File("src/main/webapp/images/gallery/sample.jpg");
 		BufferedImage img = null;
         try {
@@ -30,6 +30,7 @@ public class testImage {
 	        image.setHeight(img.getHeight());
 	        image.setPath(file.getPath());
 	        System.out.println(image.toString());
+	        //store path in db for use with caption?
         } catch (IOException e) {
 			e.printStackTrace();
 		}

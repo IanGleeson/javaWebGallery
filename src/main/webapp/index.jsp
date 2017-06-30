@@ -31,11 +31,14 @@
 			background-color: aliceblue;
 		}
 		.gallery {
-			width: 100%;
-			float: left;
+			display: flex;
+			flex-wrap: wrap;
 		}
 		.gallery img{
 			max-width: 300px
+		}
+		figure{
+			margin: 5px;
 		}
 		#search:focus{
 			box-shadow: none;

@@ -5,9 +5,20 @@
          version="3.1">
     <display-name>AMGArt</display-name>
     <description>Art Gallery</description>
-
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
+    
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>Search</display-name>
+    	<servlet-name>Search</servlet-name>
+    	<servlet-class>controller.Search</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>Search</servlet-name>
+    	<url-pattern>/Search</url-pattern>
+    </servlet-mapping>
 </web-app>

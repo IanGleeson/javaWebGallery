@@ -15,7 +15,7 @@ import javax.ws.rs.Path;
  */
 @Path(value = "/gallery") //TODO use jax from pom or httpservlet to communicate
 public class ImageController {
-	static final File dir = new File("resources/images/gallery");
+	static final File dir = new File("src/main/resources/images/gallery");
     static final String[] EXTENSIONS = new String[]{
         "jpg", "png"
     };
@@ -61,7 +61,7 @@ public class ImageController {
 	 */
 	public boolean addImage (File file) {
 		if (dir.isDirectory()) {
-			//check if file has same name
+			//TODO check if file has same name
 			BufferedImage img = null;
 			String filename = file.getName();
 			String fileExtension = "";
@@ -109,7 +109,6 @@ public class ImageController {
 	 *
 	 * @return An ArrayList of Images.
 	 */
-	@GET
 	public List<Image> getAllImages() {
 		List<Image> images = new ArrayList<Image>();
 		
