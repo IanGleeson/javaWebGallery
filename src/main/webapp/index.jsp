@@ -41,6 +41,14 @@
 			box-shadow: none;
 			border-color: #17b98b;
 		}
+		@media (max-width: 480px) {
+			header{
+				text-align: center;
+			}
+			.navbar-brand{
+				float: none;
+			}
+		}
 	</style>
 	<script type="text/javascript">
 	$( document ).ready(function() {
@@ -49,7 +57,7 @@
 	</script>
 </head>
 <body>
-	<%@include file="pages/header.html" %>
+	<%@include file="WEB-INF/pages/header.html" %>
 	<section class="container">
 		<main>
 			<h4>This is the main content of this site</h4>

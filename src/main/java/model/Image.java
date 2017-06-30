@@ -1,13 +1,17 @@
 package model;
 
 public class Image {
-	private String path = "path/to/image";
-	private String filename = "filename";
-	private int width = 10;
-	private int height = 10;
-	
+	private String path;
+	private String filename;
 	private String caption;
+	private int width;
+	private int height;
 	
+	@Override
+	public String toString() {
+		return "Image [path=" + path + ", filename=" + filename + ", caption=" + caption + ", width=" + width
+				+ ", height=" + height + "]";
+	}
 	public String getPath() {
 		return path;
 	}
