@@ -1,7 +1,7 @@
 package utilities;
 
 public class Other {
-	//Gson for JSON
+	//GSON for JSON
 	
 	
 

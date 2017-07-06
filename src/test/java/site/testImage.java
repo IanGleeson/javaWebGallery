@@ -1,5 +1,7 @@
 package site;
 
+import static org.junit.Assert.*;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -8,7 +10,6 @@ import javax.imageio.ImageIO;
 
 import org.junit.Test;
 
-import controller.ImageController;
 import model.Image;
 
 public class testImage {
@@ -27,7 +28,9 @@ public class testImage {
 	        image.setWidth(img.getWidth());
 	        image.setHeight(img.getHeight());
 	        image.setPath(file.getPath());
-	        System.out.println(image.toString());
+	        //System.out.println(image.toString());
+	        assertEquals("src\\main\\resources\\images\\gallery\\sample2.jpg", image.getPath());
+	        assertEquals("sample2.jpg", image.getFilename());
 	        //store path in db for use with caption?
         } catch (IOException e) {
 			e.printStackTrace();

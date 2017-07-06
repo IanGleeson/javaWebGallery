@@ -32,6 +32,7 @@ public class Search extends HttpServlet {
 		//System.out.println(filename);
 		
 		//TODO handle nulls and use db
+		//TODO might want to search for tags as well
 		ImageController im = new ImageController();
 		List<Image> images = im.searchImage(filename);
 		

@@ -59,7 +59,7 @@
 				      </a>
 				     <figcaption>Image caption  1</figcaption>                                 
 			    </figure>
-			    <!-- TODO dynamically add images -->
+			    <!-- TODO dynamically add images using servlet/jsf -->
 			    <figure>
 				      <a href="images/gallery/sample.jpg" data-size="717x478">
 				          <img src="images/gallery/sample.jpg" alt="Image description" />
@@ -107,9 +107,9 @@
 		<aside>
 			
 		</aside>
-		<footer>
-			This is the footer content of this site
-		</footer>
 	</section>
+	<footer>
+		This is the footer content of this site
+	</footer>
 </body>
 </html>

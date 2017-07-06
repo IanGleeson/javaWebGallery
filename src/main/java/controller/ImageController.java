@@ -10,12 +10,13 @@ import model.Image;
  * @author Ian_G
  *
  */
+//TODO convert to facelets?
 public class ImageController {
 	static final File dir = new File("src/main/resources/images/gallery");
     static final String[] EXTENSIONS = new String[]{
         "jpg", "png"
     };
-    // filter to identify images based on their extensions
+    //filter to identify images based on their extensions
     static final FilenameFilter IMAGE_FILTER = new FilenameFilter() {
         public boolean accept(final File dir, final String name) {
             for (final String ext : EXTENSIONS) {
@@ -66,7 +67,7 @@ public class ImageController {
                         File outputfile = new File("resources/images/gallery/" + filename);
             			ImageIO.write(img, fileExtension, outputfile);
                     } catch (final IOException e) {
-                        // could not read image
+                        //TODO could not read image exception
                     	//return e.getMessage();
                     }
                 }

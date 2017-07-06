@@ -7,7 +7,7 @@ import java.util.Map;
 public class DatabaseDao {
 	// TODO stored procedures or transactions in code
 	
-	// might need this later
+	// might need this for date submitted later
 	// java.util.Date utilDate = new java.util.Date();
 	// java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
 	
@@ -15,6 +15,7 @@ public class DatabaseDao {
 	
 	public void dbConnect(String db_connect_string, String db_userid, String db_password) {
 		try {
+			//TODO replace mysql in pom.xml
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			conn = DriverManager.getConnection(db_connect_string, db_userid, db_password);
 		} catch (ClassNotFoundException e) {
